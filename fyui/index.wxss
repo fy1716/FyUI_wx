@@ -1,6 +1,44 @@
-/*!
- * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
- * Copyright 2017 Tencent, Inc.
- * Licensed under the MIT license
- */
-.weui-flex{-webkit-box-align:center;-webkit-align-items:center;align-items:center}.weui-cells{margin-top:0;opacity:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:.3s;transition:.3s}.weui-cells:after,.weui-cells:before{display:none}.weui-cells_show{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.weui-cell:before{right:15px}.kind-list__item{margin:10px 0;background-color:#fff;border-radius:2px;overflow:hidden}.kind-list__item:first-child{margin-top:0}.kind-list__img{width:30px;height:30px}.kind-list__item-hd{padding:20px;-webkit-transition:opacity .3s;transition:opacity .3s}.kind-list__item-hd_show{opacity:.4}.kind-list__item-bd{height:0;overflow:hidden}.kind-list__item-bd_show{height:auto}
+.container {
+  padding: 45px 15px 0;
+}
+
+.title {
+  margin: 0 0 15px;
+  text-align: center;
+  user-select: none;
+}
+
+.logo,
+.title-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.title-text {
+  font-size: 32px;
+  margin-left: 15px;
+  font-weight: 400;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #455a64;
+  margin: 0 0 60px;
+  text-align: center;
+}
+
+.mobile-nav {
+  margin-bottom: 20px;
+}
+
+.mobile-nav__title {
+  font-size: 16px;
+  background-color: #fff;
+  padding: 17px 15px;
+}
