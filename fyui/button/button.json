@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-button1": "/miniprogram_npm/_vant-weapp@0.4.10@vant-weapp/button/index",
+    "i-button1": "../../third_part/vant_example/dist/button/index"
+  }
+}

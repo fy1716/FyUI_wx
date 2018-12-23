@@ -1,0 +1,5 @@
+<template name="modelShow">
+  <modal hidden="{{hidden}}" title="{{title}}" confirm-text="确 定" cancel-text="取 消" bindcancel="cancel" bindconfirm="confirm">
+    确认从购物车中移除该商品？
+  </modal>
+</template>

@@ -1,0 +1,6 @@
+<!-- 增加减少数量按钮 -->
+<view class="stepper">
+  <text class="{{minusStatus}}" bindtap="minusCount">-</text>
+  <input type="number" bindchange="bindManual" value="{{count}}" />
+  <text class="normal" bindtap="addCount">+</text>
+</view>

@@ -1,0 +1,6 @@
+<template name="iconShow">
+  <icon bindtap="{{func}}" data-index="{{index}}" size="{{size}}"
+    class="{{class}}" type="{{isSelect ? 'success' : 'circle'}}">
+  </icon>
+  <text wx:if="{{text}}" style="margin-right: 50rpx;"> {{text}}</text>
+</template>

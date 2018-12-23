@@ -1,0 +1,5 @@
+<!--fyui/button/button.wxml-->
+<view style='margin:10px'>
+  <view style='margin:10px'><van-button1 type="primary">vant按钮</van-button1></view>
+  <view style='margin:10px'><i-button1>iview按钮</i-button1></view>
+</view>

@@ -1,0 +1,6 @@
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" bindscroll="scroll">
+  <slot></slot>
+  <view style="border-top:1px solid #b3b3b3;margin-top:60rpx;text-align:center;width:520rpx;margin-left:auto;margin-right:auto;">
+    <text style='color:#b3b3b3;font-size:32rpx;padding:10rpx;background:#e6e1e1;position:relative;bottom:30rpx;'>回到顶部</text>
+  </view>
+</scroll-view>

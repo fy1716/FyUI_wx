@@ -1,0 +1,11 @@
+<template name="productShow">
+  <view class='hg-container' id="new">
+    <text class="hg-title">{{title}}</text>
+    <view class='gooditem'>
+      <view class='imgview' wx:key="index" wx:for="{{newgoods}}" 
+        wx:for-item="good" data-id="{{good.id}}" bindtap='lookdetail'>
+        <image class='productimg' src='{{good.pic_url}}' />
+      </view>
+    </view>
+  </view>
+</template>
