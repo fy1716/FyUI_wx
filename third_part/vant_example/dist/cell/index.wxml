@@ -5,6 +5,7 @@
   style="{{ customStyle }}"
   bind:tap="onClick"
 >
+  <view class="fy_slide {{slideColor}}"></view>
   <van-icon
     wx:if="{{ icon }}"
     name="{{ icon }}"

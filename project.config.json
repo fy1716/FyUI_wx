@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.1",
-	"appid": "wxc928d970bba696b1",
-	"projectname": "FyUI",
+	"libVersion": "2.2.5",
+	"appid": "wx4ca517ea89763d9d",
+	"projectname": "%E6%97%A5%E7%A8%8B%E7%AE%A1%E7%90%86",
 	"condition": {
 		"search": {
 			"current": -1,

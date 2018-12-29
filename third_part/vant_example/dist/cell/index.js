@@ -15,6 +15,7 @@ VantComponent({
     clickable: Boolean,
     titleWidth: String,
     customStyle: String,
+    slideColor: String,
     arrowDirection: String,
     border: {
       type: Boolean,

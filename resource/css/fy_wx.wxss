@@ -1,0 +1,21 @@
+/*!
+ * fy_wx (0.1)
+ * Licensed under the MIT license
+ */
+
+.fy_slide {
+    width: 10rpx;
+    height: 64px;
+    line-height: 64px;
+    display: inline-block;
+    margin-right: 10rpx;
+    margin-left: -15px;
+    vertical-align: top;
+}
+
+.fy_bk_color_gn {
+    background: greenyellow
+}
+.fy_bk_color_bl {
+    background: rgb(4, 175, 231)
+}

@@ -3,19 +3,9 @@ var app = getApp();
 
 //对应公共参数
 var clickFlag = true;
-var SERVIER_IP = "http://yydfsk.site:9000"; //全局服务器ip
+var SERVIER_IP = "https://www.yydfsk.site/todo_list"; //全局服务器ip
 var WX_APP_ID = "test"; //app租用者 租用者用户名
 var STATIC_PIC_PATH = "http://yydfsk.site:8100/static/img/product/";
-var BANNER_LIST = [
-  {
-    "pic_url": "http://img09.yiguoimg.com/e/ad/2016/160825/585749448986042649_800x400.jpg",
-  },
-  {
-    "pic_url": "http://img11.yiguoimg.com/e/ad/2016/160927/585749449690947899_800x400.jpg",
-  }
-];
-//首页头部广告展示
-util.banner_list = BANNER_LIST;
 
 /**
 	二次封装微信wx.request函数、统一配置SERVIER_IP，错误处理，正确处理，避免重复调用，展示等待效果等
@@ -78,11 +68,11 @@ util.request = function (option) {
     'header': header,
     'method': option.method ? option.method : 'GET',
     'success': function (response) {
-      wx.setStorageSync('token', response.data.Result.token);
+      // wx.setStorageSync('token', response.data.Result.token);
       // code为0表示成功
-      if (response.data.Code == 0) {
+      if (response.statusCode == 200) {
         if (option.success && typeof option.success == 'function') {
-          option.success(response);
+          option.success(response.data);
         } else {
           console.log("success but no handler")
         }

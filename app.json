@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/todo_list/todo_list",
+    "pages/detail/detail",
+    "pages/add/add",
+    "pages/help/help",
+    "pages/settings/settings",
+    
     "fyui/index",
     "fyui/login/login",
     "fyui/button/button",
@@ -88,7 +94,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "FyUI for 小程序",
+    "navigationBarTitleText": "日程安排",
     "navigationBarBackgroundColor": "#f8f8f8",
     "backgroundColor": "#f8f8f8"
   },
@@ -156,8 +162,8 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "fyui/index",
-        "text": "FYUI"
+        "pagePath": "pages/todo_list/todo_list",
+        "text": "列表"
       },
       {
         "pagePath": "third_part/vant_example/pages/dashboard/index",
