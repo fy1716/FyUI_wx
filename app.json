@@ -3,6 +3,7 @@
     "pages/todo_list/todo_list",
     "pages/detail/detail",
     "pages/add/add",
+    "pages/comment/comment",
     "pages/help/help",
     "pages/settings/settings",
     

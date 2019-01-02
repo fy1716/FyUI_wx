@@ -1,10 +1,14 @@
 {
   "usingComponents": {
-        "i-swipeout": "../../third_part/iview_example/dist/swipeout/index",
-        "i-cell-group": "../../third_part/iview_example/dist/cell-group/index",
-        "i-cell": "../../third_part/iview_example/dist/cell/index",
-        "i-card": "../../third_part/iview_example/dist/card/index",
-        "i-icon": "../../third_part/iview_example/dist/icon/index",
-        "i-action-sheet": "../../third_part/iview_example/dist/action-sheet/index"
+    "i-swipeout": "../../third_part/iview_example/dist/swipeout/index",
+    "i-cell-group": "../../third_part/iview_example/dist/cell-group/index",
+    "i-cell": "../../third_part/iview_example/dist/cell/index",
+    "i-card": "../../third_part/iview_example/dist/card/index",
+    "i-icon": "../../third_part/iview_example/dist/icon/index",
+    "i-modal": "../../third_part/iview_example/dist/modal/index",
+    "i-tag": "../../third_part/iview_example/dist/tag/index",
+    "i-button": "../../third_part/iview_example/dist/button/index",
+    "i-message": "../../third_part/iview_example/dist/message/index",
+    "i-action-sheet": "../../third_part/iview_example/dist/action-sheet/index"
   }
 }

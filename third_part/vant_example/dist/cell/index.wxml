@@ -5,7 +5,7 @@
   style="{{ customStyle }}"
   bind:tap="onClick"
 >
-  <view class="fy_slide {{slideColor}}"></view>
+  <view wx:if="{{ slideColor }}" class="fy_slide {{slideColor}}"></view>
   <van-icon
     wx:if="{{ icon }}"
     name="{{ icon }}"
@@ -19,7 +19,7 @@
     class="van-cell__title title-class"
   >
     <block wx:if="{{ title }}">
-      {{ title }}
+      <text>{{ title }}</text>
       <view wx:if="{{ label }}" class="van-cell__label label-class">{{ label }}</view>
     </block>
     <slot wx:else name="title" />

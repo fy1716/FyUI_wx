@@ -30,10 +30,10 @@ function _assemHeader(option) {
   var token = wx.getStorageSync('token');
   var default_header = {
     'Content-Type': 'application/json', //默认是json格式
-    'openId': openId,  //传递openId
-    'wxAppId': WX_APP_ID,  //传递WX_APP_ID
-    'username': username,  //传递username
-    'code': token,  //传递code
+    'openId': openId, //传递openId
+    'wxAppId': WX_APP_ID, //传递WX_APP_ID
+    'username': username, //传递username
+    'code': token, //传递code
   };
   if (option.header) {
     var header = Object.assign(option.header, default_header)
@@ -42,6 +42,7 @@ function _assemHeader(option) {
   }
   return header;
 };
+
 function _showToast(tip, icon, duration) {
   wx.showToast({
     title: tip,
@@ -51,7 +52,7 @@ function _showToast(tip, icon, duration) {
   });
 };
 //接口调用
-util.request = function (option) {
+util.request = function(option) {
 
   //防止接口没返回时，重复调用
   if (!clickFlag && option.method === 'POST') {
@@ -67,30 +68,30 @@ util.request = function (option) {
     'data': option.data ? option.data : {},
     'header': header,
     'method': option.method ? option.method : 'GET',
-    'success': function (response) {
+    'success': function(response) {
       // wx.setStorageSync('token', response.data.Result.token);
-      // code为0表示成功
-      if (response.statusCode == 200) {
+      // code为20开头表示成功
+      if (response.statusCode >= 200 && response.statusCode <= 209) {
         if (option.success && typeof option.success == 'function') {
           option.success(response.data);
         } else {
           console.log("success but no handler")
         }
       } else {
-        if (option.failHandler && response.data.Code in option.failHandler) {
-          option.failHandler[response.data.Code](response);
+        if (option.fail) {
+          option.fail(response);
         } else {
           console.log("failed but no handler");
           _showToast(response.data.Message || "操作失败，请稍后重试！", 'loading');
         }
       }
     },
-    'fail': function (response) {
+    'fail': function(response) {
       if (option.fail && typeof option.fail == 'function') {
         option.fail(response);
       }
     },
-    'complete': function (response) {
+    'complete': function(response) {
       clickFlag = true;
       if (option.complete && typeof option.complete == 'function') {
         option.complete(response);
@@ -100,7 +101,7 @@ util.request = function (option) {
 };
 
 //跳转到其他页面
-util.fyNavigateTo = function (URL) {
+util.fyNavigateTo = function(URL) {
   wx.navigateTo({
     url: URL
   })
@@ -110,7 +111,42 @@ util.fyNavigateTo = function (URL) {
 util.fyShowTip = _showToast;
 
 //获取图片
-util.getPic = function (id, timestamp) {
+util.getPic = function(id, timestamp) {
   return STATIC_PIC_PATH + "/pro" + id + ".jpg?timestamp=" + timestamp;
 };
+
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+const formatDateTime = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+const formatDate = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  return [year, month, day].map(formatNumber).join('-')
+}
+
+const formatTime = date => {
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [hour, minute, second].map(formatNumber).join(':')
+}
+util.formatDateTime = formatDateTime;
+util.formatDate = formatDate;
+util.formatTime = formatTime;
 module.exports = util;

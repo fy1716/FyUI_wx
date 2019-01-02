@@ -122,8 +122,8 @@ Page({
         content: selectItem.content,
         start_time: selectItem.start_time,
         period: selectItem.period,
-        typeIdx: selectItem.item_type - 1,
-        degreeIdx: this.data.level.indexOf(selectItem.degree),
+        typeIdx: 0,
+        degreeIdx: 0,
         remark: selectItem.remark,
       })
     }

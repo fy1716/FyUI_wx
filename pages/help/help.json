@@ -1,3 +1,8 @@
 {
-    "navigationBarTitleText": "帮助"
+  "navigationBarTitleText": "Modal 对话框",
+  "usingComponents": {
+    "i-modal": "../../third_part/iview_example/dist/modal/index",
+    "i-button": "../../third_part/iview_example/dist/button/index",
+    "i-message": "../../third_part/iview_example/dist/message/index"
+  }
 }

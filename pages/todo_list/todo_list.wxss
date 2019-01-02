@@ -13,7 +13,16 @@
 .userinfo-nickname {
   color: #aaa;
 }
-
+.van-cell {
+  font-size: 16px!important;
+  line-height: 64px!important;
+  padding: 1px 15px!important;
+}
+.title {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 
 .list{
@@ -57,9 +66,9 @@
 }
 
 .gn{background:#1AAD16}
-.bu{background:dodgerblue}
-.rd{background:orangered}
-.og{background:orange}
+.low{background:dodgerblue}
+.high{background:orangered}
+.middle{background:orange}
 .lb{background:lightskyblue}
 .fn{text-decoration:line-through;color:#AAA}
 .item>.fn{display:none}

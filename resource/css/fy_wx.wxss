@@ -4,18 +4,39 @@
  */
 
 .fy_slide {
-    width: 10rpx;
-    height: 64px;
-    line-height: 64px;
-    display: inline-block;
-    margin-right: 10rpx;
-    margin-left: -15px;
-    vertical-align: top;
+  width: 10rpx;
+  height: 64px;
+  line-height: 44px;
+  display: inline-block;
+  margin-right: 10rpx;
+  margin-left: -15px;
+  vertical-align: top;
 }
 
 .fy_bk_color_gn {
-    background: greenyellow
+  background: #1aad16;
 }
+
 .fy_bk_color_bl {
-    background: rgb(4, 175, 231)
+  background: dodgerblue;
 }
+
+.fy_bk_color_rd {
+  background: orangered;
+}
+
+.fy_bk_color_og {
+  background: orange;
+}
+
+.fy_bk_color_lb {
+  background: lightskyblue;
+}
+
+.fy_fn {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+
+

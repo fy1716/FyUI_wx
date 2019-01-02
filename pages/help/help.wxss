@@ -1,3 +1,178 @@
-.main{padding:8px 16px;font-size: 18px}
-.p{padding: 16px 0;}
-.t{font-weight:bold;text-align:center;}
+/* pages/todo_list/todo_list.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 84rpx;
+  height: 84rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+
+.list{
+  padding-bottom:28vw;
+}
+.view-body{
+  flex:1;
+  width:100%;
+  height:64px;
+  border-bottom: 1px solid #DADADA;
+}
+.item{
+  height: 64px;
+  line-height: 64px;
+  width: 160%
+}
+.item .content{
+  width: 62.5%;
+  float: left;
+}
+.item .content .text{
+  vertical-align: top;
+}
+.item .content .type{
+  width: 10rpx;
+  height: 64px;
+  display: inline-block;
+  margin-right: 10rpx;
+  vertical-align: top;
+}
+.item .showM{
+  width: 8%;
+  float: left;
+  text-align: center;
+}
+.item .menu{
+  width: 12.5%;
+  float: left;
+  text-align: center;
+  color:snow;
+}
+
+.gn{background:#1AAD16}
+.bu{background:dodgerblue}
+.rd{background:orangered}
+.og{background:orange}
+.lb{background:lightskyblue}
+.fn{text-decoration:line-through;color:#AAA}
+.item>.fn{display:none}
+
+.bottom{
+  width:100vw;
+  background:#FAFAFA;
+  position:fixed;
+  text-align: center;
+  border-top:1px solid #ddd;
+  bottom: 0;
+  right: 0;
+}
+.add-p{
+  display:inline-block;
+  border-radius: 50%;
+  margin:0 2.2vw;
+  margin-top:-5vw;
+  border-top:1px solid #ddd;
+}
+.add{
+  height: 20vw;
+  width: 20vw;
+  line-height: 20vw;
+  border-radius: 50%;
+  border:2vw solid #FAFAFA;
+  text-align: center;
+  font-size:10vw;
+  font-weight: bold;
+  background:#1AAD16;
+  color:white;
+  vertical-align:middle;
+}
+.xs{
+  height: 10vw;
+  width: 10vw;
+  border: 1px solid #ddd;
+  border-radius: 5vw;
+  display:inline-block;
+  vertical-align:middle;
+  margin:0 1.5vw;
+  line-height:10vw;
+  font-size:12px;
+  color:#aaa;
+}
+.xs2{
+  right: 40vw;
+}
+.demo-swipe-cell {
+  user-select: none;
+}
+
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  width: 130px;
+  height: 64px;
+  font-size: 15px;
+  line-height: 64px;
+  color: #fff;
+  text-align: center;
+}
+.i-swipeout-demo-item{
+    border-bottom:#333 solid 1px;
+}
+.i-cell-padding{
+    padding:5px 0px!important;
+    font-size:14px;
+}
+.i-swipeout-demo-title{
+    height:30px;
+    padding:0 15px;
+    line-height:30px;
+    margin-top:20px;
+    margin-bottom:5px;
+}
+.i-swipeout-demo-des{
+    padding:0 15px;
+    margin-bottom:10px;
+    font-size:12px;
+    color:#ff9900;
+}
+/*左中右结构*/
+.i-swipeout-image{
+    float:left;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-radius:40px;
+    background: #2d8cf0;
+}
+.i-swipeout-des{
+    margin-left:50px;
+}
+.i-swipeout-des-detail{
+    font-size:12px;
+    word-break:break-all;
+    color:#80848f;
+}
+
+
+/*自定义按钮*/
+.i-swipeout-demo-button-group{
+    height:100%;
+    width:100%;
+}
+.i-swipeout-demo-button{
+    width:70px;
+    float:left;
+    display: flex;
+    height:100%;
+    justify-content: center;
+    background:#2d8cf0;
+    color:#fff;
+    align-items:center;
+}
