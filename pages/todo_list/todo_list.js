@@ -85,7 +85,9 @@ Page({
   },
   //清单详情
   comment: function (e) {
-    wx.navigateTo({
+    var select_id = e.currentTarget.dataset.selectId;
+    app.globalData.selectItem = this.data.list[select_id];
+    wx.redirectTo({
       url: '../comment/comment'
     })
   },

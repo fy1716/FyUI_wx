@@ -1,97 +1,46 @@
 //logs.js
 var app = getApp();
 var util = require('../../utils/util.js')
-var now = app.util.formatTime(new Date());
 Page({
   data: {
-    long: [5, 10, 15, 20, 25, 30, 45, 60, 90],
-    level_show: ['低', '中', '高'],
-    level: ['low', 'middle', 'high'],
-    type_class: [],
-    type_list: [],
-    url: '/items/',
-    method: 'POST',
-    title: '',
-    content: '',
-    start_time: '',
-    period: 30,
-    typeIdx: 0,
-    degreeIdx: 0,
+    url: "",
+    finish_degree: 0,
     remark: '',
   },
-  //修改时间
-  startTimeChange: function(e) {
-    var that = this;
-    this.setData({
-      start_time: e.detail.value + ':00'
-    })
-  },
-  //修改时长
-  periodChange: function(e) {
-    var that = this;
-    var index = e.detail.value;
-    this.setData({
-      period: that.data.long[index]
-    })
-  },
-  //修改优先级
+  //修改完成度
   degreeChange: function(e) {
     var that = this;
-    var index = parseInt(e.detail.value);
     this.setData({
-      degreeIdx: index
+      finish_degree: e.detail
     })
-  },
-  //修改类型
-  typeChange: function(e) {
-    var that = this;
-    var index = parseInt(e.detail.value);
-    this.setData({
-      typeIdx: index
-    })
-  },
-  // 获取类型列表
-  queryTypeList: function(e) {
-    var that = this;
-    app.util.request({
-      url: '/type/',
-      success: function(res) {
-        var list = res.map(function(item) {
-          return item.name;
-        })
-        if (res) {
-          that.setData({
-            type_class: res,
-            type_list: list
-          })
-        }
-      }
-    })
+    wx.showToast({
+      icon: 'none',
+      title: `当前值：${e.detail}`
+    });
   },
   formSubmit: function(e) {
     var that = this;
-    var value = e.detail.value;
-    console.log(value);
+    var remark = e.detail.value.remark;
     try {
-      console.log(that.data.method);
-      console.log(that.data.url);
       app.util.request({
-        method: that.data.method,
+        method: "PUT",
         url: that.data.url,
         data: {
-          "title": value.title,
-          "content": value.content,
-          "period": value.period,
-          "degree": that.data.level[value.degreeIdx],
-          "item_type": that.data.type_class[value.typeIdx].id,
-          "remark": value.remark,
+          title: that.data.title,
+          content: that.data.content,
+          item_type: that.data.item_type,
+          finish_degree: that.data.finish_degree,
+          finish_flag: true,
+          remark: remark,
         },
         success: function(res) {
           wx.showToast({
             title: '保存成功'
           })
           setTimeout(function() {
-            wx.navigateBack();
+            wx.switchTab({
+              url: '../todo_list/todo_list'
+            })
           }, 800);
         },
         fail: function(res) {
@@ -110,22 +59,16 @@ Page({
       })
     }
   },
-  onLoad: function (options) {
-    this.queryTypeList();
-    if (options.type == "edit") {
-      var selectItem = app.globalData.selectItem;
-      console.log(app.globalData.selectItem);
-      this.setData({
-        url: '/items/' + selectItem.id + '/',
-        method: 'PUT',
-        title: selectItem.title,
-        content: selectItem.content,
-        start_time: selectItem.start_time,
-        period: selectItem.period,
-        typeIdx: 0,
-        degreeIdx: 0,
-        remark: selectItem.remark,
-      })
-    }
+  onLoad: function(options) {
+    var selectItem = app.globalData.selectItem;
+    console.log(app.globalData.selectItem);
+    this.setData({
+      title: selectItem.title,
+      content: selectItem.content,
+      item_type: selectItem.item_type,
+      url: "/items/" + selectItem.id + '/',
+      finish_degree: selectItem.finish_degree,
+      remark: selectItem.remark,
+    })
   }
 })

@@ -18,7 +18,6 @@
       <picker name="typeIdx" value="{{typeIdx}}" range="{{type_list}}" bindchange="typeChange">
         <van-field value="{{ type_list[typeIdx] }}" label="类型" placeholder="请输入类型" required border="{{ true }}" />
       </picker>
-      <van-field name="remark" value="{{ remark }}" type="textarea" placeholder="请输入备注" rows="1" autosize border="{{ true }}" clearable />
       <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存清单 </button>
     </form>
   </view>

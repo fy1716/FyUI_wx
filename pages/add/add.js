@@ -17,7 +17,6 @@ Page({
     period: 30,
     typeIdx: 0,
     degreeIdx: 0,
-    remark: '',
   },
   //修改时间
   startTimeChange: function(e) {
@@ -71,10 +70,7 @@ Page({
   formSubmit: function(e) {
     var that = this;
     var value = e.detail.value;
-    console.log(value);
     try {
-      console.log(that.data.method);
-      console.log(that.data.url);
       app.util.request({
         method: that.data.method,
         url: that.data.url,
@@ -84,7 +80,6 @@ Page({
           "period": value.period,
           "degree": that.data.level[value.degreeIdx],
           "item_type": that.data.type_class[value.typeIdx].id,
-          "remark": value.remark,
         },
         success: function(res) {
           wx.showToast({
@@ -124,7 +119,6 @@ Page({
         period: selectItem.period,
         typeIdx: selectItem.item_type - 1,
         degreeIdx: this.data.level.indexOf(selectItem.degree),
-        remark: selectItem.remark,
       })
     }
   }
