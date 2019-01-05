@@ -149,4 +149,5 @@ const formatTime = date => {
 util.formatDateTime = formatDateTime;
 util.formatDate = formatDate;
 util.formatTime = formatTime;
+util.formatNumber = formatNumber;
 module.exports = util;

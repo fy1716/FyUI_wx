@@ -1,19 +1,11 @@
-// const { $Message } = require('../../third_part/iview_example/dist/base/index');
+import initCalendar from '../../resource/component/calendar/main.js';
+import { switchView } from '../../resource/component/calendar/main.js';
 
-Page({
-  data: {
-    visible2: false
-  },
-
-  handleOpen2() {
-    this.setData({
-      visible2: true
-    });
-  },
-
-  handleClose2() {
-    this.setData({
-      visible2: false
-    });
+const conf = {
+  onShow: function () {
+    initCalendar();
+    switchView('week');
   }
-});
+};
+
+Page(conf);

@@ -1,8 +1,6 @@
 {
-  "navigationBarTitleText": "Modal 对话框",
+  "navigationBarTitleText": "小历-calendar 组件示例",
   "usingComponents": {
-    "i-modal": "../../third_part/iview_example/dist/modal/index",
-    "i-button": "../../third_part/iview_example/dist/button/index",
-    "i-message": "../../third_part/iview_example/dist/message/index"
+    "calendar": "../../resource/component/calendar/index"
   }
 }

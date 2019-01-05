@@ -9,6 +9,7 @@
     "i-tag": "../../third_part/iview_example/dist/tag/index",
     "i-button": "../../third_part/iview_example/dist/button/index",
     "i-message": "../../third_part/iview_example/dist/message/index",
-    "i-action-sheet": "../../third_part/iview_example/dist/action-sheet/index"
+    "i-action-sheet": "../../third_part/iview_example/dist/action-sheet/index",
+    "calendar": "../../resource/component/calendar/index"
   }
 }

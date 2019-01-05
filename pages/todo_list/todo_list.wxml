@@ -3,6 +3,7 @@
   <view>确定删除</view>
 </i-modal>
 <view class="container">
+  <calendar calendar="{{calendar}}" gesture="{{gesture}}" bindtap="changeDate"></calendar>
   <van-swipe-cell right-width="{{ 130 }}" wx:for="{{list}}" wx:for-item="vo" wx:key="id">
     <van-cell-group>
       <van-cell value="" slideColor='{{vo.degree}}' bindtap="editItem" data-select-id='{{index}}'>
@@ -22,7 +23,7 @@
     </view>
   </van-swipe-cell>
   <view class="bottom">
-    <view class="xs {{xs}}" data-index="{{xs_index}}" bindtap="xsPage"></view>
+    <view class="xs {{xs}}" data-index="{{xs_index}}" bindtap="finish_change">{{finish_filter?"全部":"待做"}}</view>
     <view class="xs xs2 {{xs2}}" data-index="{{xs2_index}}" bindtap="xsPage2">{{xs2}} </view>
     <view class="add-p">
       <view class="add" bindtap="toAddPage">+</view>

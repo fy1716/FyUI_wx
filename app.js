@@ -9,6 +9,7 @@ App({
   },
   util: require("utils/util.js"),
   globalData: {
+    date: '',
     selectItem: {}
   }
 })

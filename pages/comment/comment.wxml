@@ -5,8 +5,8 @@
       <demo-block title="完成度">
         <van-slider custom-class="slider" value="{{finish_degree}}" step="10" bar-height="4px" bind:change="degreeChange" />
       </demo-block>
-      <van-field name="remark" value="{{ remark }}" type="textarea" placeholder="请输入备注" rows="5" border="{{ true }}" clearable />
-      <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存清单 </button>
+      <van-field name="remark" value="{{ remark }}" type="textarea" placeholder="请输入评论" rows="5" border="{{ true }}" clearable />
+      <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>
     </form>
   </view>
 </view>
