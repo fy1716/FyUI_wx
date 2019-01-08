@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "添加清单"
+    "navigationBarTitleText": "添加清单",
+    "enablePullDownRefresh": false
 }

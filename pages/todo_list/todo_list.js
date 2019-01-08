@@ -1,6 +1,5 @@
 // pages/todo_list/todo_list.js
-import initCalendar from '../../resource/component/calendar/main.js';
-import { switchView, getSelectedDay  } from '../../resource/component/calendar/main.js';
+import initCalendar, { switchView, getSelectedDay } from '../../resource/component/calendar/main.js';
 //获取应用实例
 var app = getApp();
 var degree_color_map = {
@@ -130,5 +129,14 @@ Page({
   },
   onShow: function() {
     this.query_list();
+  },
+    //下拉处理函数
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh()
+    if (!this.weekMode) {
+      switchView('week');
+    } else {
+      switchView();
+    }
   }
 })

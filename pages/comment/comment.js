@@ -38,7 +38,7 @@ Page({
             title: '保存成功'
           })
           setTimeout(function() {
-            wx.switchTab({
+            wx.navigateTo({
               url: '../todo_list/todo_list'
             })
           }, 800);

@@ -98,7 +98,7 @@
   text-align: center;
   font-size:10vw;
   font-weight: bold;
-  background:#1AAD16;
+  background:#3197ed;
   color:white;
   vertical-align:middle;
 }
@@ -184,4 +184,22 @@
     background:#2d8cf0;
     color:#fff;
     align-items:center;
+}
+.nodata{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300rpx;
+}
+
+.nodata_img{
+	display: block;
+	width: 45px;
+	height: 45px;
+}
+
+.nodata_text{
+	color:#dedede;
+	font-size: 12px;
+	padding-left: 10px;
 }

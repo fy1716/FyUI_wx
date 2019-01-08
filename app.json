@@ -6,12 +6,9 @@
     "pages/comment/comment",
     "pages/help/help",
     "pages/settings/settings",
-    
     "fyui/index",
     "fyui/login/login",
     "fyui/button/button",
-
-
     "third_part/vant_example/pages/dashboard/index",
     "third_part/vant_example/pages/action-sheet/index",
     "third_part/vant_example/pages/badge/index",
@@ -51,8 +48,6 @@
     "third_part/vant_example/pages/rate/index",
     "third_part/vant_example/pages/collapse/index",
     "third_part/vant_example/pages/picker/index",
-
-
     "third_part/iview_example/pages/index/index",
     "third_part/iview_example/pages/icon/index",
     "third_part/iview_example/pages/color/index",
@@ -91,13 +86,13 @@
     "third_part/iview_example/pages/collapse/index",
     "third_part/iview_example/pages/sticky/index",
     "third_part/iview_example/pages/load-more/index"
-
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "日程安排",
-    "navigationBarBackgroundColor": "#f8f8f8",
-    "backgroundColor": "#f8f8f8"
+    "enablePullDownRefresh": true
   },
   "usingComponents": {
     "demo-block": "../../third_part/vant_example/components/demo-block/index",
@@ -155,26 +150,6 @@
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
-  },
-  "tabBar": {
-    "color": "#858585",
-    "selectedColor": "#008842",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/todo_list/todo_list",
-        "text": "列表"
-      },
-      {
-        "pagePath": "third_part/vant_example/pages/dashboard/index",
-        "text": "ZAN"
-      },
-      {
-        "pagePath": "third_part/iview_example/pages/index/index",
-        "text": "IVIEW"
-      }
-    ]
   },
   "debug": true
 }
