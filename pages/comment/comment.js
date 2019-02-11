@@ -7,6 +7,7 @@ Page({
         finish_degree: 0,
         remark: '',
     },
+    
     //修改完成度
     degreeChange: function(e) {
         var that = this;
@@ -52,7 +53,7 @@ Page({
                         title: '保存成功'
                     })
                     setTimeout(function() {
-                        wx.switchTab({
+                        wx.redirectTo({
                             url: '../todo_list/todo_list'
                         })
                     }, 800);

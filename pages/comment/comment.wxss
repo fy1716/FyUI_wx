@@ -8,5 +8,5 @@
   border-bottom: 1px solid #DADADA;
 }
 .slider {
-  margin: 0 15px 30px;
+  margin: 0 25px 30px;
 }

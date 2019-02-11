@@ -3,7 +3,7 @@
   <view class="section">
     <form bindsubmit="formSubmit">
       <demo-block title="完成度">
-        <van-slider custom-class="slider" value="{{finish_degree}}" step="10" bar-height="4px" bind:change="degreeChange" />
+        <van-slider custom-class="slider" value="{{finish_degree}}" step="5" bar-height="10px" bind:change="degreeChange" />
       </demo-block>
       <van-field name="remark" value="{{ remark }}" type="textarea" placeholder="请输入评论" rows="5" border="{{ true }}" clearable />
       <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>

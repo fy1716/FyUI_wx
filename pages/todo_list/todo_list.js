@@ -167,7 +167,7 @@ Page({
     comment: function(e) {
         var select_id = e.currentTarget.dataset.selectId;
         app.globalData.selectItem = this.data.list[select_id];
-        wx.redirectTo({
+        wx.navigateTo({
             url: '../comment/comment'
         }) 
     },
