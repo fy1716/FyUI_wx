@@ -909,6 +909,7 @@ const conf = {
    * @param {string} view  视图 [week, month]
    */
   switchWeek(view) {
+    view = 'week';
     if (this.config.multi) return warn('多选模式不能切换周月视图');
     const { selectedDay = [], curYear, curMonth } = this.data.calendar;
     if (!selectedDay.length) return;

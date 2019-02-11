@@ -10,13 +10,13 @@
         <van-field value="{{ start_time }}" label="开始时间" placeholder="请输入开始时间" border="{{ true }}" clearable required/>
       </picker>
       <picker name="period" value="{{period}}" range="{{long}}" bindchange="periodChange">
-        <van-field value="{{ period }}" label="时长" placeholder="请输入时长" required border="{{ true }}" disabled />
+        <van-field value="{{ period }}" label="时长" placeholder="请输入时长" required border="{{ true }}" disabled/>
       </picker>
       <picker name="degreeIdx" value="{{degreeIdx}}" range="{{level_show}}" bindchange="degreeChange">
-        <van-field value="{{ level_show[degreeIdx] }}" label="重要度" placeholder="请输入重要度" required border="{{ true }}" disabled />
+        <van-field value="{{ level_show[degreeIdx] }}" label="重要度" placeholder="请输入重要度" required border="{{ true }}" disabled/>
       </picker>
       <picker name="typeIdx" value="{{typeIdx}}" range="{{type_list}}" bindchange="typeChange">
-        <van-field value="{{ type_list[typeIdx] }}" label="类型" placeholder="请输入类型" required border="{{ true }}" disabled />
+        <van-field value="{{ type_list[typeIdx] }}" label="类型" placeholder="请输入类型" required border="{{ true }}" disabled/>
       </picker>
       <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存清单 </button>
     </form>

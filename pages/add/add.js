@@ -1,6 +1,6 @@
 //logs.js
 var app = getApp();
-var util = require('../../utils/util.js');
+var util = require('../../utils/util.js')
 var now = app.util.formatTime(new Date());
 Page({
   data: {
@@ -78,7 +78,6 @@ Page({
           "title": value.title,
           "content": value.content,
           "period": value.period,
-          "date": app.globalData.date,
           "degree": that.data.level[value.degreeIdx],
           "item_type": that.data.type_class[value.typeIdx].id,
         },
@@ -118,7 +117,6 @@ Page({
         content: selectItem.content,
         start_time: selectItem.start_time,
         period: selectItem.period,
-        date: app.globalData.date,
         typeIdx: selectItem.item_type - 1,
         degreeIdx: this.data.level.indexOf(selectItem.degree),
       })
