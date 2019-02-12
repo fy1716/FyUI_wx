@@ -94,7 +94,7 @@
 
   ],
   "window": {
-    "navigationBarTextStyle": "light",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "日程安排",
     "navigationBarBackgroundColor": "#49c0f7",
     "backgroundColor": "#f8f8f8"

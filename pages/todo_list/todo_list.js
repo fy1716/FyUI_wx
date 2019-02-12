@@ -30,6 +30,7 @@ Page({
         if (select_day != app.globalData.date) {
             app.globalData.date = [select_day.year, select_day.month, select_day.day].map(app.util.formatNumber).join('-');
             this.query_list();
+            this.query_rate();
         }
     },
     handleOpen(e) {
@@ -91,19 +92,16 @@ Page({
         })
     },
     update_rate: function () {
-        console.log(1111);
         var that = this;
         // 获取列表数据
         app.util.request({
             url: '/api/rate/',
             method: "post",
             success: function (res) {
-                console.log(2222);
                 console.log(res);
             },
             fail: function (res) {
                 console.log(res);
-                console.log(2222);
             }
         })
     },
@@ -177,7 +175,7 @@ Page({
         app.globalData.date = app.util.formatDate(new Date());
     },
     onShow: function() {
+        this.update_rate();
         this.query_list();
-        this.query_rate();
     }
 })

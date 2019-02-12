@@ -2,7 +2,7 @@
 
 <view
   class="custom-class {{ utils.bem('tag', [size, { mark, plain, round }]) }} {{ plain ? 'van-hairline--surround' : '' }}"
-  style="{{ style }}"
+  style="{{ style }};vertical-align:sub;"
 >
   <slot />
 </view>
